@@ -1,8 +1,20 @@
 % run plot_wave
 
-input('wave left\n press enter when ready') 
-plot_wave(@(x) sin(x), @(x)0*x   ,1,-5,5,0,10)
-input('wave right\n press enter when ready')
-plot_wave(@(x) 0*x   , @(x)sin(x),1,-5,5,0,10)
+f=@(x)sin(x);
+f2=@(x)sin(4*x);
+g=@(x)sin(x);
+z=@(x)0*x;
+
+input('sine wave left\n press enter when ready') 
+plot_wave( f,z   ,1,-5,5,0,10)
+input('sine wave right\n press enter when ready')
+plot_wave( z,g   ,1,-5,5,0,10)
 input('superposition\n press enter when ready')
-plot_wave(@(x) sin(x), @(x)sin(x),1,-5,5,0,10)
+plot_wave( f,g   ,1,-5,5,0,10)
+
+input('sine wave left\n press enter when ready') 
+plot_wave( f2,z   ,1,-5,5,0,10)
+input('sine wave right\n press enter when ready')
+plot_wave( z,g   ,1,-5,5,0,10)
+input('superposition\n press enter when ready')
+plot_wave( f2,g   ,1,-5,5,0,10)

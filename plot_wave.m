@@ -10,7 +10,7 @@ function plot_wave(f,g,a,xmin,xmax,tmin,tmax)
 % set parameters
 nx = 500;  % number of steps in space
 nt = 100;  % number of steps in time
-td = 10;   % approx duration for the animation
+td = 5;    % approx duration for the animation
 
 % mesh vector
 x = xmin + (xmax - xmin)* [0:nx]/nx;
