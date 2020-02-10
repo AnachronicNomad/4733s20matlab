@@ -1,4 +1,4 @@
-M=1e0;
+M=1;
 tspan=[0:M]/M;
 y=ode1(@(x,t)x,tspan,1);
 plot(tspan,y)
