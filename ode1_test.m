@@ -1,9 +1,11 @@
-M=1;
+M=2
 tspan=[0:M]/M;
 y=ode1(@(x,t)x,tspan,1);
-plot(tspan,y)
+plot(tspan,y,'o--')
 hold on
-fplot(@exp,[0,1])
+for i=1:length(tspan),
+    fplot(@(x)y(i)*exp(x)/exp(tspan(i)),[tspan(i),1])
+end
 grid on
 hold off
 legend('Euler method','exact solution')
