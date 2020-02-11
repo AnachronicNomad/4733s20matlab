@@ -1,4 +1,12 @@
-M=2
+function ode_test(M)
+% ode_test(M)
+% demo of Euler method for u'=u, u(0)=1
+% in: 
+%   M  mesh size
+% Jan Mandel, Feb 10 2020 
+if ~exist('M'),
+    M=1,
+end
 tspan=[0:M]/M;
 y=ode1(@(x,t)x,tspan,1);
 plot(tspan,y,'o--')
