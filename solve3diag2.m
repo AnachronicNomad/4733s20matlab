@@ -16,9 +16,9 @@ beta = [0;beta];    % beta(i)=A(i-1,i) same indexing as in the book
 % no need to store    
 for i=1:n-1
     % clc
-    m1        = A(i+1,i)/A(i,i)
+    % m1        = A(i+1,i)/A(i,i)
     m = beta(i+1)/delta(i)
-    A(i+1,:) = A(i+1,:)-m*A(i,:)
+    % A(i+1,:) = A(i+1,:)-m*A(i,:)
     delta(i+1)=delta(i+1) - m*c(i);
     b(i+1)   = b(i+1) - m*b(i)  
     %    input(pr);
@@ -31,7 +31,7 @@ v(n)=b(n)/delta(n)
 % input(pr);
 for i=n-1:-1:1
     %   clc, A, b
-    v0(i) = (b(i) - A(i,i+1)*v0(i+1))/A(i,i)
+    % v0(i) = (b(i) - A(i,i+1)*v0(i+1))/A(i,i)
     v(i) = (b(i) - c(i)*v(i+1))/delta(i)
     input(pr);
 end
