@@ -21,9 +21,17 @@ for a=[1:4]/5
     y=[a,a];
     z=green(x,y);
     plot3(x,y,z,'k');
+    x=[a,1];
+    y=[a,a];
+    z=green(x,y);
+    plot3(x,y,z,'k');
 end
 for a=[1:4]/5
     y=[0,a];
+    x=[a,a];
+    z=green(x,y);
+    plot3(x,y,z,'k');
+    y=[a,1];
     x=[a,a];
     z=green(x,y);
     plot3(x,y,z,'k');

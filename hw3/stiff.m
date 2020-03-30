@@ -1,3 +1,4 @@
+% stiff.m
 % Program the forward Euler method and the backward Euler method
 % (eq. 1.69 page 37) for the equation
 % \[
