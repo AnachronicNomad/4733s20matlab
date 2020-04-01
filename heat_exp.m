@@ -6,6 +6,7 @@ function heat_exp(f,n,T)
 % nt points
 dx=1/(n+1)
 dt=2.1*dx*dx
+r=dt/(dx*dx)
 nt=ceil(T/dt);
 v=zeros(1,n+2);
 vnew=v;
