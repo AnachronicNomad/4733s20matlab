@@ -5,7 +5,7 @@ function heat_exp(f,n,T)
 % n points in x
 % T max time
 % example: heat_exp(@(x)cos(2*pi*x),50,0.1)
-if ~nargin, help heat_exp, return, end
+if ~nargin, help(mfilename), return, end
 dx=1/(n+1)
 dt=0.50*dx*dx
 r=dt/(dx*dx)
@@ -25,6 +25,7 @@ for m=1:nt+1
     for j=2:n+1
         vnew(j) = v(j) + dt * (v(j-1)-2*v(j)+v(j+1))/(dx*dx);
     end
+    vnew
     v=vnew;
 end
 hold off
