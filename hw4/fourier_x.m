@@ -39,6 +39,7 @@ for k=1:10
     sin_sum = sin_sum + b(k)*sin(k*pi*x);
     cos_sum = cos_sum + c(k)*cos(k*pi*x);
 end
+figure  % new figure
 plot(x,f,'b',x,sin_sum,'r',x,cos_sum,'k')
 legend('f(x)=x','sine sum','cosine sum')
 title('Fourier series approximation for N=10')
