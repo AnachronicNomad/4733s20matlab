@@ -1,9 +1,11 @@
 function heat_exp(f,n,T)
+% heat_exp(f,n,T)
 % finite differences for the heat equation on (0,1) - explicit method
 % f function handle
 % n points in x
 % T max time
-% nt points
+% example: heat_exp(@(x)cos(2*pi*x),50,0.1)
+if ~nargin, help heat_exp, return, end
 dx=1/(n+1)
 dt=0.50*dx*dx
 r=dt/(dx*dx)
